@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The 7 Moats: Human Success in the Age of Intelligent Machines | Dr. Cary Woods</title>
+  <meta name="description" content="The 7 Moats is Dr. Cary Woods' framework for human success in the age of intelligent machines: Judgment, Trust, Craft, Adaptation, Systems Thinking, Ownership, and Meaning." />
+  <meta property="og:title" content="The 7 Moats" />
+  <meta property="og:description" content="A framework by Dr. Cary Woods for human success in the age of intelligent machines." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#c8aa7a" />
+  <style>
+    :root {
+      --bg: #15110c;
+      --bg-soft: #211a12;
+      --panel: #2d2419;
+      --tan: #c8aa7a;
+      --tan-light: #ead7b1;
+      --tan-dark: #8d7249;
+      --ink: #f7efe1;
+      --muted: #d7c5a7;
+      --line: rgba(232, 203, 156, 0.22);
+      --shadow: rgba(0, 0, 0, 0.38);
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, rgba(200, 170, 122, 0.18), transparent 34rem), linear-gradient(180deg, #17120d 0%, #0f0c09 100%);
+      line-height: 1.6;
+    }
+    a { color: var(--tan-light); text-decoration: none; }
+    a:hover { color: #fff7e8; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.4rem; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(21, 17, 12, 0.82);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; }
+    .mark { display: flex; align-items: center; gap: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; color: var(--tan-light); }
+    .mark-symbol { width: 34px; height: 34px; border: 1px solid var(--tan); border-radius: 50%; position: relative; box-shadow: 0 0 0 6px rgba(200,170,122,0.07); }
+    .mark-symbol::before, .mark-symbol::after { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(234,215,177,0.82); border-radius: 50%; }
+    .mark-symbol::after { inset: 13px; background: var(--tan); border: 0; }
+    .nav-links { display: flex; align-items: center; gap: 1.1rem; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.88rem; color: var(--muted); }
+    .nav-links a { color: var(--muted); }
+    .button { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(234,215,177,0.45); border-radius: 999px; padding: 0.72rem 1.05rem; color: #17120d; background: linear-gradient(135deg, var(--tan-light), var(--tan)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 700; letter-spacing: 0.01em; box-shadow: 0 18px 40px var(--shadow); }
+    .button.secondary { color: var(--tan-light); background: rgba(200,170,122,0.08); border-color: rgba(234,215,177,0.28); box-shadow: none; }
+    .hero { min-height: 78vh; display: grid; align-items: center; padding: 5.5rem 0 4rem; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr); gap: 3.5rem; align-items: center; }
+    .eyebrow { color: var(--tan); text-transform: uppercase; letter-spacing: 0.18em; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.78rem; margin-bottom: 1rem; }
+    h1 { font-size: clamp(3rem, 8vw, 6.8rem); line-height: 0.95; margin: 0 0 1.25rem; font-weight: 500; letter-spacing: -0.055em; }
+    .subtitle { font-size: clamp(1.18rem, 2.2vw, 1.75rem); max-width: 780px; color: var(--tan-light); margin: 0 0 1.4rem; }
+    .lede { max-width: 700px; color: var(--muted); font-size: 1.08rem; margin-bottom: 2rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .hero-art { border: 1px solid var(--line); border-radius: 28px; overflow: hidden; min-height: 520px; background: linear-gradient(180deg, rgba(21,17,12,0.05), rgba(21,17,12,0.45)), radial-gradient(circle at center, rgba(234,215,177,0.22), transparent 16rem), linear-gradient(135deg, #3a2d1f, #15110c); box-shadow: 0 30px 90px rgba(0,0,0,0.52); position: relative; }
+    .hero-art::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(234,215,177,0.55); border-radius: 50%; box-shadow: 0 0 0 34px rgba(200,170,122,0.07), 0 0 0 72px rgba(200,170,122,0.05), 0 0 0 116px rgba(200,170,122,0.035); }
+    .hero-art::after { content: "Judgment · Trust · Craft · Adaptation · Systems Thinking · Ownership · Meaning"; position: absolute; left: 1.3rem; right: 1.3rem; bottom: 1.3rem; padding: 1rem; border: 1px solid rgba(234,215,177,0.22); border-radius: 18px; background: rgba(21,17,12,0.68); color: var(--tan-light); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.88rem; letter-spacing: 0.04em; backdrop-filter: blur(12px); }
+    section { padding: 5rem 0; border-top: 1px solid var(--line); }
+    .section-heading { max-width: 780px; margin-bottom: 2.4rem; }
+    h2 { font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1.05; margin: 0 0 1rem; font-weight: 500; letter-spacing: -0.035em; }
+    .section-heading p, .wide-copy { color: var(--muted); font-size: 1.08rem; max-width: 820px; }
+    .moats-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1rem; }
+    .moat-card { min-height: 230px; padding: 1.15rem; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(180deg, rgba(58,45,31,0.78), rgba(33,26,18,0.78)); box-shadow: 0 20px 50px rgba(0,0,0,0.24); }
+    .moat-number { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--tan); font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1rem; }
+    .moat-card h3 { margin: 0 0 0.7rem; font-size: 1.3rem; line-height: 1.05; color: var(--ink); font-weight: 500; }
+    .moat-card p { margin: 0; color: var(--muted); font-size: 0.94rem; line-height: 1.5; }
+    .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 2.4rem; align-items: start; }
+    .quote-panel { padding: 2rem; border: 1px solid var(--line); border-radius: 28px; background: rgba(200,170,122,0.08); position: sticky; top: 110px; }
+    .quote-panel blockquote { margin: 0; font-size: clamp(1.4rem, 2.6vw, 2.4rem); line-height: 1.14; color: var(--tan-light); }
+    .quote-panel cite { display: block; margin-top: 1.2rem; color: var(--tan); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+    .content-panel { padding: 2rem; border: 1px solid var(--line); border-radius: 28px; background: rgba(21,17,12,0.38); }
+    .content-panel p { color: var(--muted); margin-top: 0; }
+    .products { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+    .product-card { border: 1px solid var(--line); border-radius: 22px; padding: 1.25rem; background: rgba(45,36,25,0.76); }
+    .product-card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; color: var(--tan-light); }
+    .product-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+    .cta-band { border: 1px solid var(--line); border-radius: 34px; padding: clamp(2rem, 5vw, 4rem); background: linear-gradient(135deg, rgba(200,170,122,0.16), rgba(21,17,12,0.72)), radial-gradient(circle at top right, rgba(234,215,177,0.18), transparent 28rem); box-shadow: 0 30px 80px rgba(0,0,0,0.32); }
+    .cta-band h2 { max-width: 850px; }
+    .cta-band p { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    footer { padding: 3rem 0; color: var(--tan-dark); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; border-top: 1px solid var(--line); }
+    .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 1050px) { .moats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 820px) { .hero-grid, .split { grid-template-columns: 1fr; } .hero-art { min-height: 420px; } .nav-links { display: none; } }
+    @media (max-width: 560px) { .moats-grid, .products { grid-template-columns: 1fr; } .hero { padding-top: 3.5rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="mark" href="#top" aria-label="The 7 Moats home"><span class="mark-symbol" aria-hidden="true"></span><span>The 7 Moats</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#framework">Framework</a>
+        <a href="#read">Read</a>
+        <a href="#book">Book</a>
+        <a href="#about">About</a>
+        <a class="button secondary" href="https://open.substack.com/pub/drcarywoods/p/what-still-works-in-america-the-seven?r=pkosd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">Read on Substack</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">A Breaking Barriers framework by Dr. Cary Woods</div>
+          <h1>The 7 Moats</h1>
+          <p class="subtitle">Human success in the age of intelligent machines.</p>
+          <p class="lede">For all of human history, people assumed human intelligence sat at the top of the pyramid. That assumption is weakening. The 7 Moats is an answer to the question that follows: now what?</p>
+          <div class="hero-actions">
+            <a class="button" href="https://open.substack.com/pub/drcarywoods/p/what-still-works-in-america-the-seven?r=pkosd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">Read the opening essay</a>
+            <a class="button secondary" href="#framework">Explore the framework</a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Abstract seven-ring moat graphic in tan and dark brown"></div>
+      </div>
+    </section>
+    <section id="framework">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">The framework</div>
+          <h2>Seven forms of human value worth building.</h2>
+          <p>The 7 Moats is not a survival framework. It is a success framework for human beings, teams, institutions, and communities working alongside increasingly capable machines.</p>
+        </div>
+        <div class="moats-grid">
+          <article class="moat-card"><div class="moat-number">Moat 01</div><h3>Judgment</h3><p>Decision-making under uncertainty, where context, consequence, and moral weight matter more than prediction alone.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 02</div><h3>Trust</h3><p>The human infrastructure that lets people rely on one another when no contract, metric, or machine can carry the full burden.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 03</div><h3>Craft</h3><p>Disciplined care applied to consequential work. Done is easy now. Good is the moat.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 04</div><h3>Adaptation</h3><p>The capacity to learn, revise, and keep becoming useful when the world changes faster than the old map can explain.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 05</div><h3>Systems Thinking</h3><p>The ability to see relationships, feedback loops, incentives, failure points, and consequences across the whole.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 06</div><h3>Ownership</h3><p>The willingness to be accountable for outcomes, to carry responsibility, and to stand behind the work when it matters.</p></article>
+          <article class="moat-card"><div class="moat-number">Moat 07</div><h3>Meaning</h3><p>The human capacity to ask what all this is for, then build lives, institutions, and tools around answers worth keeping.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="read">
+      <div class="wrap split">
+        <aside class="quote-panel"><blockquote>People are afraid. The question is not whether machines become more capable. They will. The question is what human beings build next.</blockquote><cite>The 7 Moats</cite></aside>
+        <div class="content-panel">
+          <div class="eyebrow">Read the series</div>
+          <h2>Start with the opening essay.</h2>
+          <p>The opening essay introduces the full framework and explains why The 7 Moats belongs inside <em>What Still Works in America</em>. It begins with a simple recognition: people can feel that the intelligence pyramid is changing, even before they have language for it.</p>
+          <p>Breaking Barriers will continue publishing the series as each moat is developed into a full essay, audio asset, video essay, and later a compact book.</p>
+          <p><a class="button" href="https://open.substack.com/pub/drcarywoods/p/what-still-works-in-america-the-seven?r=pkosd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">Read on Substack</a></p>
+        </div>
+      </div>
+    </section>
+    <section id="book">
+      <div class="wrap">
+        <div class="section-heading"><div class="eyebrow">Coming next</div><h2>From essay series to durable public framework.</h2><p>The free essays are the doorway. The book, workbook, audio, video, and discussion materials will make the framework easier to carry into classrooms, leadership teams, civic groups, and ordinary conversations about human value after AI.</p></div>
+        <div class="products">
+          <article class="product-card"><h3>Kindle Edition</h3><p>A compact edition of the complete framework, designed for readers who want all seven moats in one place.</p></article>
+          <article class="product-card"><h3>Audio Essays</h3><p>Narrated versions of the essays for readers who want to listen while walking, driving, working, or thinking.</p></article>
+          <article class="product-card"><h3>Video Essays</h3><p>A Breaking Barriers playlist built from the essays, with simple visuals, pull quotes, and clear chapter structure.</p></article>
+          <article class="product-card"><h3>Field Guide</h3><p>A practical workbook for individuals, teams, educators, and institutions applying the seven moats.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrap"><div class="cta-band"><div class="eyebrow">About the author</div><h2>Dr. Cary Woods writes about what still works.</h2><p>Dr. Cary Woods is the author of <em>The Machinery of Democracy</em> and <em>What Still Works in America</em>. His work examines public policy, technology, institutions, civic competence, human dignity, and the systems that help people build lives worth living.</p><p><strong>Guiding phrase:</strong> We do what we do for all humankind.</p><div class="hero-actions"><a class="button" href="https://open.substack.com/pub/drcarywoods/p/what-still-works-in-america-the-seven?r=pkosd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">Read Breaking Barriers</a><a class="button secondary" href="mailto:contact@example.com">Invite Cary to speak</a></div></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-grid"><div>© 2026 Dr. Cary Woods. The 7 Moats is a Breaking Barriers project.</div><div><a href="https://open.substack.com/pub/drcarywoods/p/what-still-works-in-america-the-seven?r=pkosd&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true">Substack</a></div></div></footer>
+</body>
+</html>
